@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+			<meta charset="utf-8">
+			<meta http-equiv="X-UA-Compatible" content="IE=edge">
+			<title>Hearthdecks</title>
+			<link rel="icon" href="favicon.ico">
+			<link rel="stylesheet" href="css/normalize.css">
+			<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+		<div class="container">
+			<h1 id="logo">Hearthdecks</h1>
+		</div>
+		<div class="container">
+			<input type="text" id="search" placeholder="Search" />
+
+			<div id="class-icons">
+				<i class="class-icon selected-icon" data-class="druid"></i>
+				<i class="class-icon" data-class="hunter"></i>
+				<i class="class-icon" data-class="mage"></i>
+				<i class="class-icon" data-class="paladin"></i>
+				<i class="class-icon" data-class="priest"></i>
+				<i class="class-icon" data-class="rogue"></i>
+				<i class="class-icon" data-class="shaman"></i>
+				<i class="class-icon" data-class="warlock"></i>
+				<i class="class-icon" data-class="warrior"></i>
+				<i class="class-icon" data-class="neutral"></i>
+			</div>
+
+			<button id="clear">Clear Deck</button>
+
+			<button id="export">Export Deck</button>
+		</div>
+
+		<div class="container">
+			<div id="page">
+				<div id="back"></div>
+				<div id="results">
+					<h2 class="class-name"></h2>
+				</div>
+				<div id="next"></div>
+			</div>
+
+			<div id="deck-container">
+				<h2 id="deck-size">Deck 0/30</h2>
+				<ul id="deck"></ul>
+			</div>
+		</div>
+
+		<script src="js/jQuery.min.js"></script>
+		<script src="js/script.js"></script>
+	</body>
+</html>

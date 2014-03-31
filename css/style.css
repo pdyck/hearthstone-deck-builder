@@ -1,0 +1,278 @@
+@font-face {
+	font-family: Hearthstone;
+	src: url("fonts/BelweBold.ttf");
+}
+
+html, body {
+	width: 100%;
+	height: 100%;
+	background-color: #582122;
+	font-family: Hearthstone;
+}
+
+button {
+	background-color: #debea5;
+	color: #2a1801;
+	border: 6px solid #9c7a3b;
+	padding: 2px 10px;
+	border-radius: 10px;
+}
+
+.container {
+	width: 980px;
+	margin: 0 auto 16px;
+}
+
+#logo {
+	text-align: center;
+	color: #fff;
+	text-shadow:
+	    -1px -1px 0 #000,
+	    1px -1px 0 #000,
+	    -1px 1px 0 #000,
+	    1px 1px 0 #000;
+}
+
+#search {
+	width: 200px;
+	height: 36px;
+	border: 5px solid #853234;
+	background: transparent;
+	outline: none;
+	padding-left: 10px;
+	padding-right: 20px;
+	color: #ccc;
+	border-radius: 10px;
+}
+
+#page, #deck-container {
+	height: 550px;
+	box-shadow: 0 0 14px #999;
+}
+
+#page {
+	width: 700px;
+	background-color: #e4ce96;
+	border-radius: 10px;
+	float: left;
+	color: #2a1801;
+}
+
+#results {
+	width: 600px;
+	height: 510px;
+	margin: 0 auto;
+	float: left;
+}
+
+#back, #next {
+	width: 50px;
+	height: 650px;
+	float: left;
+	cursor: pointer;
+}
+
+#deck-container {
+	width: 250px;
+	margin: 0;
+	border-radius: 10px;
+	background-color: #4e3425;
+	float: right;
+	text-align: center;
+	color: #fff;
+	text-shadow:
+	    -1px -1px 0 #000,
+	    1px -1px 0 #000,
+	    -1px 1px 0 #000,
+	    1px 1px 0 #000;
+}
+
+#deck {
+	width: 200px;
+	height: 470px;
+	margin: 0 auto;
+	background-color: #392c4a;
+	padding: 0 5px;
+	box-shadow: inset 0 0 6px #000;
+	border-radius: 10px;
+	overflow: auto;
+}
+
+.deck-entry {
+	text-align: left;
+	font-size: 12px;
+	cursor: pointer;
+	list-style: none;
+	background-color: #3e4553;
+	border: 2px solid #69635f;
+	border-radius: 10px;
+	margin-top: 2px;
+	padding: 4px 10px 4px 36px;
+}
+
+.deck-entry[data-mana=m0] {
+	background: url("../images/mana/0.png") left no-repeat;
+}
+
+.deck-entry[data-mana=m1] {
+	background: url("../images/mana/1.png") left no-repeat;
+}
+
+.deck-entry[data-mana=m2] {
+	background: url("../images/mana/2.png") left no-repeat;
+}
+
+.deck-entry[data-mana=m3] {
+	background: url("../images/mana/3.png") left no-repeat;
+}
+
+.deck-entry[data-mana=m4] {
+	background: url("../images/mana/4.png") left no-repeat;
+}
+
+.deck-entry[data-mana=m5] {
+	background: url("../images/mana/5.png") left no-repeat;
+}
+
+.deck-entry[data-mana=m6] {
+	background: url("../images/mana/6.png") left no-repeat;
+}
+
+.deck-entry[data-count=c1]:after {
+	content: "";
+}
+
+.deck-entry[data-count=c2]:after {
+	content: "2";
+	float: right;
+	color: #c5b500;
+	font-size: 16px;
+}
+
+.class-name {
+	text-align: center;
+	font-size: 36px;
+	margin-bottom: 0;
+	text-transform: capitalize;
+}
+
+.card:hover {
+	-webkit-transform: scale(1.05);
+	   -moz-transform: scale(1.05);
+	    -ms-transform: scale(1.05);
+	     -o-transform: scale(1.05);
+	        transform: scale(1.05);
+}
+
+.card:active {
+	-webkit-animation: card-focus .2s;
+	-o-animation: card-focus .2s;
+	animation: card-focus .2s;
+	-webkit-transform: scale(1.1);
+	   -moz-transform: scale(1.1);
+	    -ms-transform: scale(1.1);
+	     -o-transform: scale(1.1);
+	        transform: scale(1.1);
+}
+
+#class-icons {
+	display: inline;
+	position: relative;
+	top: 16px;
+	margin-left: 6px;
+	margin-right: 36px;
+}
+
+.class-icon {
+	width: 32px;
+	height: 32px;
+	background-color: #e4ce96;
+	border-radius: 5px;
+	border: 4px solid #853234;
+	display: inline-block;
+	overflow: hidden;
+	cursor: pointer;
+}
+
+.selected-icon {
+	box-shadow: inset 0 0 16px #fff;
+	-webkit-transform: scale(1.2);
+	   -moz-transform: scale(1.2);
+	    -ms-transform: scale(1.2);
+	     -o-transform: scale(1.2);
+	        transform: scale(1.2);
+}
+
+.class-icon[data-class=druid] {
+	background-image: url("../images/class/druid-icon.png");
+	background-position: -4px -4px;
+}
+
+.class-icon[data-class=hunter] {
+	background-image: url("../images/class/hunter-icon.png");
+	background-position: -4px -4px;
+}
+
+.class-icon[data-class=mage] {
+	background-image: url("../images/class/mage-icon.png");
+	background-position: -4px -4px;
+}
+
+.class-icon[data-class=paladin] {
+	background-image: url("../images/class/paladin-icon.png");
+	background-position: -4px -4px;
+}
+
+.class-icon[data-class=priest] {
+	background-image: url("../images/class/priest-icon.png");
+	background-position: -4px -4px;
+}
+
+.class-icon[data-class=rogue] {
+	background-image: url("../images/class/rogue-icon.png");
+	background-position: -4px -4px;
+}
+
+.class-icon[data-class=shaman] {
+	background-image: url("../images/class/shaman-icon.png");
+	background-position: -4px -4px;
+}
+
+.class-icon[data-class=warlock] {
+	background-image: url("../images/class/warlock-icon.png");
+	background-position: -4px -4px;
+}
+
+.class-icon[data-class=warrior] {
+	background-image: url("../images/class/warrior-icon.png");
+	background-position: -4px -4px;
+}
+
+@-webkit-keyframes card-focus {
+	0% {  }
+	100% { -webkit-transform: scale(1.1);
+	        transform: scale(1.1); }
+}
+@-moz-keyframes card-focus {
+	0% {  }
+	100% { -moz-transform: scale(1.1);
+	        transform: scale(1.1); }
+}
+@-ms-keyframes card-focus {
+	0% {  }
+	100% { -ms-transform: scale(1.1);
+	        transform: scale(1.1); }
+}
+@-o-keyframes card-focus {
+	0% {  }
+	100% { -o-transform: scale(1.1);
+	        transform: scale(1.1); }
+}
+@keyframes card-focus {
+	0% {  }
+	100% { -webkit-transform: scale(1.1);
+	   -moz-transform: scale(1.1);
+	    -ms-transform: scale(1.1);
+	     -o-transform: scale(1.1);
+	        transform: scale(1.1); }
+}
