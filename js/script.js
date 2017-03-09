@@ -179,7 +179,7 @@ function exportDeck () {
 	$.each(deck, function (i, v) {
 		exported.push(v.id);
 	});
-	exported = "http://pdyck.github.io/hs/?d=" + exported.toString();
+	exported = "http://pdyck.github.io/hearthstone-deck-builder/?d=" + exported.toString();
 	window.prompt("Copy to clipboard: C+Ctrl, Enter", exported);
 }
 
